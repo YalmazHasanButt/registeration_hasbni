@@ -2,6 +2,7 @@ package com.funkymaster.hasbni.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -13,7 +14,7 @@ class RegistrationActivity : AppCompatActivity() {
 
     private lateinit var emailReg_field : EditText
     private lateinit var passwordReg_field : EditText
-    private lateinit var registration: Button
+    private lateinit var registration_btn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,22 +31,25 @@ class RegistrationActivity : AppCompatActivity() {
     fun initialize_variables(){
         emailReg_field = findViewById(R.id.emailReg_field)
         passwordReg_field = findViewById(R.id.passwordReg_field)
-        registration = findViewById(R.id.registration_btn)
+        registration_btn = findViewById(R.id.registration_btn)
     }   //initialize variables
 
     fun onClickWorkings(){
-        var email = emailReg_field.text.toString()
-        var password = passwordReg_field.text.toString()
-        if(email.equals("") || password.equals(""))
-            Toast.makeText(this, "Both email & password are required!" , Toast.LENGTH_LONG).show()
-        else{
-            if(!Util.isEmailValid(email))
-                Toast.makeText(this, "Please enter a valid email!" , Toast.LENGTH_LONG).show()
+        registration_btn.setOnClickListener(View.OnClickListener {
+            var email = emailReg_field.text.toString()
+            var password = passwordReg_field.text.toString()
+            if(email.equals("") || password.equals(""))
+                Toast.makeText(this, "Both email & password are required!" , Toast.LENGTH_LONG).show()
             else{
-                //both email & password are correct proceed
-                startActivity(Intent(this, OTPActivity :: class.java))
-            } //inner else
-        }   //outer else
+                if(!Util.isEmailValid(email))
+                    Toast.makeText(this, "Please enter a valid email!" , Toast.LENGTH_LONG).show()
+                else{
+                    //both email & password are correct proceed
+                    startActivity(Intent(this, OTPActivity :: class.java))
+                } //inner else
+            }   //outer else
+        })
+
     }   //on click
 
 }   //registration class

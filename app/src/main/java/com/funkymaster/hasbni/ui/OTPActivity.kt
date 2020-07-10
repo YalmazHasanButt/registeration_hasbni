@@ -6,11 +6,10 @@ import android.text.InputType
 import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.View
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.funkymaster.hasbni.R
+import kotlinx.android.synthetic.main.activity_registration.*
 
 class OTPActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -29,6 +28,7 @@ class OTPActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var otp_et2 :EditText
     private lateinit var otp_et3 :EditText
     private lateinit var otp_et4 :EditText
+    private lateinit var verify_btn: Button
 
 
 
@@ -61,6 +61,7 @@ class OTPActivity : AppCompatActivity(), View.OnClickListener {
         otp_et3 = findViewById(R.id.otp_et3)
         otp_et4 = findViewById(R.id.otp_et4)
         cancel_view = findViewById(R.id.cancel_view)
+        verify_btn = findViewById(R.id.verify_btn)
         otp_et1.addTextChangedListener(GenericTextWatcher(otp_et1, otp_et2));
         otp_et2.addTextChangedListener(GenericTextWatcher(otp_et2, otp_et3));
         otp_et3.addTextChangedListener(GenericTextWatcher(otp_et3, otp_et4));
@@ -106,32 +107,12 @@ class OTPActivity : AppCompatActivity(), View.OnClickListener {
                 set_value(0)
             }
             R.id.cancel_view-> {
-                if (otp_et4.hasFocus()) {
-                    if (otp_et4.length() == 1) {
-                        //last edit text has value filled so delete it and keep the focus
-                        otp_et4.text = null
-                    } else {
-                        otp_et3.text = null
-                        otp_et3.requestFocus()
-                    }
-                } else if (otp_et3.hasFocus()) {
-                    if (otp_et3.length() == 1) {
-                        otp_et3.text = null
-                    } else {
-                        otp_et2.text = null
-                        otp_et3.requestFocus()
-                    }
-                } else if (otp_et2.hasFocus()) {
-                    if (otp_et2.length() == 1) {
-                        otp_et2.text = null
-                    } else {
-                        otp_et1.text = null
-                        otp_et1.requestFocus()
-                    }
-                } else {
-                        otp_et1.requestFocus()
-                        otp_et1.text = null
-                } //end of else if
+                otp_et1.text = null
+                otp_et2.text = null
+                otp_et3.text = null
+                otp_et4.text = null
+                otp_et1.requestFocus() //setting focus on first box
+                verify_btn.isClickable = false
             }
         } //where
     } //on click
@@ -144,8 +125,12 @@ class OTPActivity : AppCompatActivity(), View.OnClickListener {
             otp_et2.setText(no.toString())
         else if(otp_et3.hasFocus())
             otp_et3.setText((no.toString()))
-        else if(otp_et4.hasFocus())
+        else if(otp_et4.hasFocus()) {
             otp_et4.setText(no.toString())
+        }
+
+        if(!otp_et1.equals("") && !otp_et2.equals("") && !otp_et3.equals("") && !otp_et4.equals(""))
+            verify_btn.isClickable = true
     }   //set value
 
     class GenericTextWatcher internal constructor(private val currentView: View, private val nextView: View?) :
