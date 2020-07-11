@@ -7,11 +7,12 @@
     android:layout_height="match_parent">
 
 
-    <TextView
+    <Button
         android:id="@+id/two_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:orientation="horizontal"
         android:clickable="true"
         android:onClick="onClick"
@@ -25,11 +26,12 @@
 
 
 
-    <TextView
+    <Button
         android:id="@+id/five_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@android:color/transparent"
         android:text="5"
         android:textColor="#0f0f0f"
         android:textSize="@dimen/_30sdp"
@@ -41,11 +43,12 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/two_view" />
 
-    <TextView
+    <Button
         android:id="@+id/six_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_65sdp"
+        android:layout_marginStart="@dimen/_45sdp"
+        android:background="@android:color/transparent"
         android:orientation="horizontal"
         android:text="6"
         android:textColor="#0f0f0f"
@@ -56,12 +59,13 @@
         app:layout_constraintStart_toEndOf="@+id/five_view"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/nine_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_65sdp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="@dimen/_45sdp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="@dimen/_20sdp"
         android:orientation="horizontal"
         android:text="9"
         android:textColor="#0f0f0f"
@@ -73,22 +77,23 @@
 
     <ImageView
         android:id="@+id/cancel_view"
-        android:layout_width="@dimen/_24sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginStart="@dimen/_65sdp"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_45sdp"
         android:clickable="true"
         android:onClick="onClick"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_30sdp"
         android:src="@drawable/del_icon"
         app:layout_constraintStart_toEndOf="@+id/zero_view"
         app:layout_constraintTop_toBottomOf="@+id/nine_view" />
 
-    <TextView
+    <Button
         android:id="@+id/three_view"
-        android:layout_width="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_65sdp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="@dimen/_45sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:orientation="horizontal"
         android:clickable="true"
         android:onClick="onClick"
@@ -98,11 +103,12 @@
         app:layout_constraintBottom_toTopOf="@+id/six_view"
         app:layout_constraintStart_toEndOf="@+id/two_view" />
 
-    <TextView
+    <Button
         android:id="@+id/four_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_65sdp"
+        android:layout_marginEnd="@dimen/_45sdp"
+        android:background="@android:color/transparent"
         android:orientation="horizontal"
         android:text="4"
         android:clickable="true"
@@ -113,12 +119,13 @@
         app:layout_constraintEnd_toStartOf="@+id/five_view"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/one_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_65sdp"
-        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="@dimen/_45sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:clickable="true"
         android:onClick="onClick"
         android:orientation="horizontal"
@@ -128,13 +135,14 @@
         app:layout_constraintBottom_toTopOf="@id/four_view"
         app:layout_constraintEnd_toStartOf="@+id/two_view" />
 
-    <TextView
+    <Button
         android:id="@+id/eight_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:orientation="horizontal"
         android:text="8"
+        android:background="@android:color/transparent"
         android:textColor="#0f0f0f"
         android:textSize="@dimen/_30sdp"
         android:clickable="true"
@@ -144,13 +152,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/five_view" />
 
-    <TextView
+    <Button
         android:id="@+id/seven_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="@dimen/_65sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_45sdp"
         android:orientation="horizontal"
+        android:background="@android:color/transparent"
+
         android:text="7"
         android:clickable="true"
         android:onClick="onClick"
@@ -159,12 +169,13 @@
         app:layout_constraintEnd_toStartOf="@+id/eight_view"
         app:layout_constraintTop_toBottomOf="@+id/four_view" />
 
-    <TextView
+    <Button
         android:id="@+id/zero_view"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:orientation="horizontal"
+        android:background="@android:color/transparent"
         android:text="0"
         android:textColor="#0f0f0f"
         android:textSize="@dimen/_30sdp"
@@ -197,7 +208,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/_15sdp"
         android:textSize="@dimen/_11sdp"
         android:text="Resend Code"
         app:layout_constraintBottom_toTopOf="@+id/two_view"
@@ -280,11 +291,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_120sdp"
+        android:layout_marginBottom="@dimen/_118sdp"
         android:text="Verification Code"
         android:gravity="center"
         android:textColor="#0f0f0f"
-        android:textSize="@dimen/_20sdp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/two_view"
         app:layout_constraintLeft_toLeftOf="parent"

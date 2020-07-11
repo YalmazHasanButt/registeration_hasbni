@@ -11,17 +11,17 @@ import com.funkymaster.hasbni.R
 
 class OTPActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var  one_view :TextView
+    private lateinit var  one_view :Button
     private lateinit var  cancel_view :ImageView
-    private lateinit var  two_view :TextView
-    private lateinit var  three_view :TextView
-    private lateinit var  four_view :TextView
-    private lateinit var  five_view :TextView
-    private lateinit var  six_view :TextView
-    private lateinit var  seven_view :TextView
-    private lateinit var  eight_view :TextView
-    private lateinit var  nine_view :TextView
-    private lateinit var  zero_view :TextView
+    private lateinit var  two_view :Button
+    private lateinit var  three_view :Button
+    private lateinit var  four_view :Button
+    private lateinit var  five_view :Button
+    private lateinit var  six_view :Button
+    private lateinit var  seven_view :Button
+    private lateinit var  eight_view :Button
+    private lateinit var  nine_view :Button
+    private lateinit var  zero_view :Button
     private lateinit var otp_et1 :EditText
     private lateinit var otp_et2 :EditText
     private lateinit var otp_et3 :EditText

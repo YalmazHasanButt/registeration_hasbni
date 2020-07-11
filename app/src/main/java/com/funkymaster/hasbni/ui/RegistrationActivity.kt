@@ -23,6 +23,8 @@ class RegistrationActivity : AppCompatActivity() {
         } catch (e: NullPointerException) {
         } //catch
         setContentView(R.layout.activity_registration)
+
+
         initialize_variables()
         onClickWorkings()
     }   //on create method
